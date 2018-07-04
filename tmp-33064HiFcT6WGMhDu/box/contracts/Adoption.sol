@@ -7,7 +7,7 @@ contract Adoption {
     
     
     //Adopting  a pet
-    function adopt(uint256 petID) public returns (uint256){
+    function adopt(uint petID) public returns (uint){
         require(petID>=0&&petID<=15);
         
         adopters[petID] = msg.sender;
@@ -16,7 +16,7 @@ contract Adoption {
     }
     
     //Retrieving adopters
-    function getAdapters() public view returns (address[16]){
+    function getAdopters() public view returns (address[16]){
         return adopters;
     }
 }
